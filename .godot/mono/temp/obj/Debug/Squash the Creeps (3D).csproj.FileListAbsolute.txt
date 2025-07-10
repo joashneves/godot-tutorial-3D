@@ -15,3 +15,4 @@ E:\GODOT\3d_squash_the_creeps_starter\.godot\mono\temp\obj\Debug\refint\Squash t
 E:\GODOT\3d_squash_the_creeps_starter\.godot\mono\temp\obj\Debug\Squash the Creeps (3D).pdb
 E:\GODOT\3d_squash_the_creeps_starter\.godot\mono\temp\obj\Debug\Squash the Creeps (3D).genruntimeconfig.cache
 E:\GODOT\3d_squash_the_creeps_starter\.godot\mono\temp\obj\Debug\ref\Squash the Creeps (3D).dll
+E:\GODOT\3d_squash_the_creeps_starter\.godot\mono\temp\obj\Debug\Squash the Creeps (3D).sourcelink.json

@@ -3,11 +3,21 @@ using System;
 
 public partial class Mob : CharacterBody3D
 {
-	[Export]
-	public int MinSpeed { get; set; } = 10;
-	[Export]
-	public int MaxSpeed { get; set; } = 18;
+    [Export]
+    public int MinSpeed { get; set; } = 10;
+    [Export]
+    public int MaxSpeed { get; set; } = 18;
     // This function will be called from the Main scene.
+    [Signal]
+    public delegate void SquashedEventHandler();
+
+    // ...
+
+    public void Squash()
+    {
+        EmitSignal(SignalName.Squashed);
+        QueueFree();
+    }
     public void Initialize(Vector3 startPosition, Vector3 playerPosition)
     {
         // We position the mob by placing it at startPosition
@@ -25,12 +35,12 @@ public partial class Mob : CharacterBody3D
         // in order to move in the direction the mob is looking.
         Velocity = Velocity.Rotated(Vector3.Up, Rotation.Y);
     }
-	public override void _PhysicsProcess(double delta)
-	{
-		MoveAndSlide();
-	}
-	private void OnVisibilityNotifierScreenExited()
-	{
-		QueueFree();
-	}
+    public override void _PhysicsProcess(double delta)
+    {
+        MoveAndSlide();
+    }
+    private void OnVisibilityNotifierScreenExited()
+    {
+        QueueFree();
+    }
 }
