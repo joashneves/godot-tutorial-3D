@@ -34,7 +34,7 @@ script = ExtResource("1_r8dba")
 MobScene = ExtResource("2_4mnve")
 
 [node name="Ground" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
 collision_layer = 4
 collision_mask = 0
 
@@ -48,6 +48,7 @@ mesh = SubResource("BoxMesh_hm6ff")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16.6604, 0)
 
 [node name="Player" parent="." instance=ExtResource("1_tb64c")]
+transform = Transform3D(0.991573, 0, -0.129547, 0, 1, 0, 0.129547, 0, 0.991573, 0.286284, 2, 0)
 collision_mask = 6
 
 [node name="CameraPivot" type="Marker3D" parent="."]
@@ -84,7 +85,7 @@ skeleton = NodePath("../MeshInstance3D")
 curve = SubResource("Curve3D_ssfms")
 
 [node name="SpawnLocation" type="PathFollow3D" parent="SpawnPath"]
-transform = Transform3D(0.0115822, 0, -0.999933, 0, 1, 0, 0.999933, 0, 0.0115822, -17.014, 0, -10.7804)
+transform = Transform3D(0.0115835, 0, -0.999932, 0, 1, 0, 0.999932, 0, 0.0115835, -17.014, 0, -10.7804)
 
 [node name="MobTimer" type="Timer" parent="."]
 wait_time = 0.5
@@ -92,9 +93,11 @@ autostart = true
 
 [node name="UserInterface" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ScoreLabel" type="Label" parent="UserInterface"]
 layout_mode = 0
@@ -112,7 +115,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
+color = Color(0, 0, 0, 0.411765)
 
 [node name="Enter" type="Label" parent="UserInterface/Retry"]
 layout_mode = 1

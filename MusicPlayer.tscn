@@ -2,6 +2,6 @@
 
 [ext_resource type="AudioStream" uid="uid://c5qpnfga41t4p" path="res://art/House In a Forest Loop.ogg" id="1_bolrp"]
 
-[node name="MusicPlayer" type="AudioStreamPlayer"]
+[node name="MusicPlayer" type="AudioStreamPlayer3D"]
 stream = ExtResource("1_bolrp")
 autoplay = true

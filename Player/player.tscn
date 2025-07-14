@@ -11,6 +11,7 @@ height = 0.253607
 radius = 0.975644
 
 [node name="Player" type="CharacterBody3D"]
+transform = Transform3D(0.991573, 0, -0.129547, 0, 1, 0, 0.129547, 0, 0.991573, 0.286284, 0, 0)
 script = ExtResource("1_t0m68")
 
 [node name="Pivot" type="Node3D" parent="."]
@@ -27,7 +28,9 @@ collision_mask = 2
 monitorable = false
 
 [node name="CollisionShape" type="CollisionShape3D" parent="MobDetector"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.669033, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.456161, 0)
 shape = SubResource("CylinderShape3D_ea1pq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [connection signal="body_entered" from="MobDetector" to="." method="OnMobDetectorBodyEntered"]

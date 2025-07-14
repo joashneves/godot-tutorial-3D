@@ -1,8 +1,9 @@
 res://main.tscn
 res://Player/player.tscn
 res://Mob/mob.tscn
-res://Mob/Mob.cs
-res://Player/Player.cs
 res://Main.cs
 res://ScoreLabel.cs
+res://Mob/Mob.cs
+res://Player/Player.cs
 res://MusicPlayer.tscn
+res://animation/flot.res

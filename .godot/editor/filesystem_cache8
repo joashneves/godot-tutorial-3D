@@ -1,7 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1752178492
+::res://::1752455403
 icon.webp::CompressedTexture2D::27118964165343846::1752098454::1752098488::1::::<><>::
-main.tscn::PackedScene::3342119202660631109::1752100947::0::1::::<><>::uid://dyujcqedwiik7::::res://Player/player.tscn
+Main.cs::CSharpScript::-1::1752183849::0::1::::<>Node3D<>::
+main.tscn::PackedScene::3342119202660631109::1752185410::0::1::::<><>::res://Main.cs<>uid://dyujcqedwiik7::::res://Player/player.tscn<>uid://c4eul54k3b127::::res://Mob/mob.tscn<>res://ScoreLabel.cs<>uid://dq3wospkrnib7::::res://MusicPlayer.tscn
+MusicPlayer.tscn::PackedScene::8341447870426986842::1752184447::0::1::::<><>::uid://c5qpnfga41t4p::::res://art/House In a Forest Loop.ogg
+ScoreLabel.cs::CSharpScript::-1::1752183210::0::1::::<>Label<>::
 ::res://art/::1752098489
 body.tres::StandardMaterial3D::-1::1752098455::0::1::::<><>::
 eye.tres::StandardMaterial3D::-1::1752098454::0::1::::<><>::
@@ -14,9 +17,9 @@ pupil.tres::StandardMaterial3D::-1::1752098455::0::1::::<><>::
 ::res://fonts/::1752098488
 LICENSE.txt::TextFile::-1::1752098454::0::1::::<><>::
 Montserrat-Medium.ttf::FontFile::6505293508080888906::1752098454::1752098488::1::::<><>::
-::res://Mob/::1752101590
-Mob.cs::CSharpScript::-1::1752101587::0::1::::<><>::
-mob.tscn::PackedScene::6817810948485337830::1752101590::0::1::::<><>::res://Mob/Mob.cs<>uid://bicorb7we351t::::res://art/mob.glb
-::res://Player/::1752100947
-Player.cs::CSharpScript::-1::1752100939::0::1::::<>CharacterBody3D<>::
-player.tscn::PackedScene::8885632724714833556::1752100947::0::1::::<><>::uid://d0ypm0v45pwdv::::res://art/player.glb<>res://Player/Player.cs
+::res://Mob/::1752184100
+Mob.cs::CSharpScript::-1::1752181045::0::1::::<>CharacterBody3D<>::
+mob.tscn::PackedScene::6817810948485337830::1752184100::0::1::::<><>::res://Mob/Mob.cs<>uid://bicorb7we351t::::res://art/mob.glb
+::res://Player/::1752184100
+Player.cs::CSharpScript::-1::1752182267::0::1::::<>CharacterBody3D<>::
+player.tscn::PackedScene::8885632724714833556::1752184100::0::1::::<><>::uid://d0ypm0v45pwdv::::res://art/player.glb<>res://Player/Player.cs

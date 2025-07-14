@@ -1,10 +1,44 @@
-[gd_scene load_steps=4 format=3 uid="uid://c4eul54k3b127"]
+[gd_scene load_steps=7 format=3 uid="uid://c4eul54k3b127"]
 
 [ext_resource type="Script" path="res://Mob/Mob.cs" id="1_fy50k"]
 [ext_resource type="PackedScene" uid="uid://bicorb7we351t" path="res://art/mob.glb" id="1_ior70"]
+[ext_resource type="Animation" uid="uid://r01flmrmynj0" path="res://animation/flot.res" id="3_p3gxk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_f3r21"]
-size = Vector3(2, 1, 2)
+size = Vector3(2.38647, 1.39355, 2.50928)
+
+[sub_resource type="Animation" id="Animation_3t07m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xsrwe"]
+_data = {
+"RESET": SubResource("Animation_3t07m"),
+"flot": ExtResource("3_p3gxk")
+}
 
 [node name="Mob" type="CharacterBody3D" groups=["mob"]]
 collision_layer = 2
@@ -16,9 +50,16 @@ script = ExtResource("1_fy50k")
 [node name="mob" parent="Pivot" instance=ExtResource("1_ior70")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0161133, 0, -0.154297)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00988771, 0.196777, -0.154053)
 shape = SubResource("BoxShape3D_f3r21")
 
 [node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Pivot/mob")
+libraries = {
+"": SubResource("AnimationLibrary_xsrwe")
+}
+autoplay = "flot"
 
 [connection signal="screen_exited" from="VisibleOnScreenNotifier3D" to="." method="_on_visible_on_screen_notifier_3d_screen_exited"]
